@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <title></title>
+        <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.css' %}">
+        <link rel="stylesheet" href="{% static 'bootstrap/css/mystyle.css' %}">
+    </head>
+    <body>
+
+
+        <div class="container">
+            <p></p>
+            <br><br><br>
+            <div class="jumbotron">
+                <p></p>
+                <h1 class="display-4">FOLLOW FORM</h1>
+                <br><br>
+                <form class="visiterform" method="POST">
+                    {{ form.as_p }}
+                    {% csrf_token %}
+                    <button class="btn btn-success" type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+         
+
+
+        
+        <script src="{% static 'bootstrap/jq/jquary slim.js' %}"></script>
+        <script src="{% static 'bootstrap/js/bootstrap.js' %}"></script>
+    </body>
+</html>

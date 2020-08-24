@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <title>www.milankaviranga.com</title>
+        <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.css' %}">
+        <link rel="stylesheet" href="{% static 'bootstrap/css/mystyle.css' %}">
+    </head>
+    
+    <body>
+
+        <!--<div class="container">-->
+          <header id="upheaders">
+            
+            <div class="container"><h4><a id="social" href="https://www.facebook.com">Facebook</a> <a id="social" href="http://www.github.com">Github</a> <a id="social" href="http://www.Linkdin.com">Linkdin</a></h4></div>
+            
+          </header>
+        </div>  
+
+        <p></p>
+
+        <h1 id="upheader"><div class="container"><center>MILAN BLOG</center></div></h1>
+
+        <nav class="navbar navbar-expand-sm bg-info navbar-dark justify-content-left sticky-top">
+        
+          <a class="navbar-brand" href="{% url 'post:index' %}">HOME</a>
+  
+  
+          <button class="navbar-toggler" type='button' data-toggle='collapse' data-target='#collapsibleNavbar'>
+            <span class='navbar-toggler-icon'></span>
+          </button>
+  
+          <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      
+  
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link text-body" href="#">CONTACT</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-body" href="#">ABOUT</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-body" href="#" id="navbardrop" data-toggle="dropdown">
+                  CATAGORY
+                </a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="{% url 'post:pythons' %}">$ PYTHON</a>
+                  <a class="dropdown-item" href="{% url 'post:java' %}">$ JAVA</a>
+                </div>
+              </li>
+              <li class="nav-item" id="line">
+                <button class="btn btn-danger"><a id="btna" href="{% url 'post:formes' %}">Follow</a></button>
+              </li>
+            
+            </ul>
+
+          </div>
+  
+        </nav>
+
+        <div class="content">
+          <div class="container">
+            {% block body_block %}
+            {% endblock %}
+          </div>
+        </div>
+        
+      
+
+      <script src="{% static 'bootstrap/jq/jquary slim.js' %}"></script>
+      <script src="{% static 'bootstrap/js/bootstrap.js' %}"></script>
+        
+      
+    </body>
+</html>
