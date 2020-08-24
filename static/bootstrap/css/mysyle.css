@@ -11,7 +11,7 @@ body{
 #upheader{
      color: white;
      text-shadow:1px 1px 2px black, 0 0 25px black,0 0 5px black;
-     background-color:  #00ffff;
+     background-color:  black;
      font-family:'Chiller';
      
 }
@@ -22,7 +22,7 @@ body{
 }
 
 #upheaders{
-     background-color:DodgerBlue;
+     background-color:#1a0000;
      opacity:0.8;
 }
  #social{
